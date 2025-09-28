@@ -11,7 +11,7 @@ function Login() {
   // State for storing error message if login fails
   const [error, setError] = useState("");
 
-  // uset login credentials
+  // user login credentials
   const userLogin = {
     email: "teacher@example.com",
     password: "12345"
@@ -30,7 +30,7 @@ function Login() {
       alert("Login Successful!");
       setError("");
       navigate("/students")
-    } else {
+    } else { // If login failed show error message
       setError("Invalid email or password");
     }
   };
@@ -41,7 +41,6 @@ function Login() {
         <div className="col-md-4">
           <div className="card p-4 shadow" >
 
-            {/* color="abovleine" */}
             <h3 className="text-center mb-3">Teacher Login</h3>
             {/* Show error message if login fails */}
 
